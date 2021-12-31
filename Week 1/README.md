@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Overview of Project
 The purpose of this Analysis was to provide Louise useful information in a understandable format. To that end I created
 2 charts that will be very useful to Louise's goal of creating a successful kickstarter to fund a theater production.
@@ -15,3 +16,9 @@ goal amounts. It data was curated with the COUNTIFS function within Excel.
 
 #Charts
 
+=======
+# schoolwork
+Louise below is the outcomes of kickstarters by dates and by category
+![Outcomes by date](https://user-images.githubusercontent.com/96025706/147032150-b4183d03-5d97-44a8-b4cd-fa5830c79312.png)
+![Parent Category Outcomes](https://user-images.githubusercontent.com/96025706/147032215-dd1768d0-6228-4949-878e-c49ac928b779.png)
+>>>>>>> 3ec5e48bccebc4719800b573ca75d9f24ea0919c
