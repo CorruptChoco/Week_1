@@ -22,6 +22,7 @@ Looking at the results we can see a couple of things. In general green stocks ha
    
 The "For" loop allow the code to look at every row in the data. The "If" starments select out the start and end that we then assign to the starting price and ending price and we add the volumes in between to get our total volume. We achieved the return volume by dividing the ending price by the starting price and subreacting 1. This looks like `Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1` in our code. Each individual "Ticker" is represented by turning tickerEndingPrices and tickerStartingPrices into array data sets.
 
+
 Our Code orginally looked through the data multiple times slowing the macro down. by building arrays we significantly reduced the time needed to run the program. this is given by the screenshots below. Our pre-optomized code started like this
 ```
 For i = 0 To 11
@@ -38,3 +39,7 @@ As started before this meant the code looked through ALL the data 12 times where
 ![VBA_Challenge_2018](https://user-images.githubusercontent.com/96025706/147890192-3bb5997d-5393-4018-ade4-5baf38736a9b.png)
 
 # Summary
+## General
+There are advantages and disadvantages to refactoring code. Advantages include the increaded productivity gained by making the code run faster for the end user. Additionally refactoring code may also make the code more simple to read and easier for the next coder to work on the code. However, the disadvantages include the amout of time it may take for someone to go through working code to make it better. It may not be worthwile for a buissiness to pay someone to look over already working code only for it to make a negliagable difference in the performance of the code. At the same time, just as the code could become more simple the code may also become more complex and hard to read in the future.
+## Specific
+For our specific case the advantage is the code is performed faster. However, the disadvantage is that if new tickers are added into our data 5 arrays must be adjusted instead of just 1 for our previous iteration of the code.
