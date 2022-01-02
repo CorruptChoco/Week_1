@@ -5,7 +5,7 @@ This data gives us a idea of how these 12 different companies did for the year.
 # Results
 Looking at the results we can see a couple of things. In general green stocks had a much better year in 2017 than in 2018. In 2018 the only well performing stocks were "ENPH" and "RUN". These two stocks also had some of the highest trade volumes. As for "DQ" our target company we can give a resonable assurance that this is not a good stock to put money into based on our analysis. The code for our anaylsis looks like
  
- `For i = 2 To RowCount
+    For i = 2 To RowCount
   
         tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
        
@@ -18,15 +18,15 @@ Looking at the results we can see a couple of things. In general green stocks ha
         
             tickerIndex = tickerIndex + 1
         End If
-   Next i
-   ` 
+    Next i
+   
 The "For" loop allow the code to look at every row in the data. The "If" starments select out the start and end that we then assign to the starting price and ending price and we add the volumes in between to get our total volume. We achieved the return volume by dividing the ending price by the starting price and subreacting 1. This looks like `Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1` in our code. Each individual "Ticker" is represented by turning tickerEndingPrices and tickerStartingPrices into array data sets.
 
 Our Code orginally looked through the data multiple times slowing the macro down. by building arrays we significantly reduced the time needed to run the program. this is given by the screenshots below. Our pre-optomized code started like this
-`For i = 0 To 11
-ticker = tickers(i)
-For j = rowStart To rowEnd
-       `
+`    For i = 0 To 11
+     ticker = tickers(i)
+     For j = rowStart To rowEnd`
+       
 As started before this meant the code looked through ALL the data 12 times whereas our new code only needs to look once.
 
 ## Pre-Optimization Screenshots
