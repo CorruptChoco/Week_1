@@ -23,10 +23,10 @@ Looking at the results we can see a couple of things. In general green stocks ha
 The "For" loop allow the code to look at every row in the data. The "If" starments select out the start and end that we then assign to the starting price and ending price and we add the volumes in between to get our total volume. We achieved the return volume by dividing the ending price by the starting price and subreacting 1. This looks like `Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1` in our code. Each individual "Ticker" is represented by turning tickerEndingPrices and tickerStartingPrices into array data sets.
 
 Our Code orginally looked through the data multiple times slowing the macro down. by building arrays we significantly reduced the time needed to run the program. this is given by the screenshots below. Our pre-optomized code started like this
-`    For i = 0 To 11
-     ticker = tickers(i)
-     For j = rowStart To rowEnd`
-       
+'''For i = 0 To 11
+ticker = tickers(i)
+For j = rowStart To rowEnd
+'''       
 As started before this meant the code looked through ALL the data 12 times whereas our new code only needs to look once.
 
 ## Pre-Optimization Screenshots
